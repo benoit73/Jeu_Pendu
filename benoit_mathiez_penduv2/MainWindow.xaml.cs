@@ -21,16 +21,17 @@ namespace benoit_mathiez_penduv2
     public partial class MainWindow : Window
     {
         private LaClass myLaClass;
-
+        public bool isMusiquePlaying = true;
         public MainWindow()
         {
+            
             InitializeComponent();
             myLaClass = new LaClass();
             myLaClass.ListDeMot();
             Initialiser();
-            string imagePath2 = "C:\\Users\\SIO\\Desktop\\benoit_mathiez_penduv2\\benoit_mathiez_penduv2\\Pendu\\village.jpg";
-            BitmapImage bitmapImage2 = new BitmapImage(new Uri(imagePath2));
-            ImgBG.Source = bitmapImage2;
+            //musique.Play();
+            MeEffect.Play();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,9 +52,9 @@ namespace benoit_mathiez_penduv2
                 {
                     button.Background = Brushes.Red;
                     int numImage = myLaClass.NbMort;
-                    string imagePath = $"C:\\Users\\SIO\\source\\repos\\benoit_mathiez_penduv2\\benoit_mathiez_penduv2\\Pendu\\{numImage}.png";
-                    BitmapImage bitmapImage = new BitmapImage(new Uri(imagePath));
-                    monImage.Source = bitmapImage;
+                    string imagePath = $"Pendu\\{numImage}.png";
+                    //BitmapImage bitmapImage = new BitmapImage(new Uri(imagePath));
+                    //monImage.Source = bitmapImage;
                 }
                 TbMot.Text = myLaClass.MotCache;
 
@@ -65,6 +66,7 @@ namespace benoit_mathiez_penduv2
                 if (myLaClass.NbMort == 7)
                 {
                     TbMessage.Text = "Tu as perdu !!";
+                    MeEffect.Play();
                 }
             }
 
@@ -95,6 +97,20 @@ namespace benoit_mathiez_penduv2
         private void GagneJeu()
         {
             TbMessage.Text = "Tu as gagné !";
+        }
+
+        private void Sound_Click(object sender, RoutedEventArgs e)
+        {
+            if (isMusiquePlaying == true)
+            {
+                musique.Stop();
+                isMusiquePlaying = false;
+            }
+            else
+            {
+                musique.Play();
+                isMusiquePlaying = true;
+            }
         }
     }
 }

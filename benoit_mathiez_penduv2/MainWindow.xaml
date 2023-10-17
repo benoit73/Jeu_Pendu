@@ -17,10 +17,30 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="ImgBG" Grid.Row="0" Grid.RowSpan="99" Grid.Column="0" Grid.ColumnSpan="99" Stretch="Fill"/>
+        <MediaElement x:Name="musique" Source="Pendu\musique.mp3" LoadedBehavior="Manual"/>
+
+        <MediaElement x:Name="MeEffect" Source="Pendu\minecraft.mp3" LoadedBehavior="Manual"/>
+
+
+        <Image x:Name="ImgBG" Grid.Row="0" Grid.RowSpan="99" Grid.Column="0" Grid.ColumnSpan="99" Stretch="Fill" Source="Pendu\village.jpg" />
 
         <TextBlock x:Name="TbMessage" Grid.Column="1" Grid.Row="1"/>
-        <Image x:Name="monImage" Grid.Column="1" Grid.Row="0"/>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Sound" Grid.Column="1" Click="Sound_Click" >
+                <Image Source="Pendu\enceinte.jpg" Stretch="Fill"/>
+            </Button>
+            <Image x:Name="monImage"  Grid.Row="1"/>
+        </Grid>
 
         <Grid Grid.Column="0" Grid.Row="0">
             <Grid.RowDefinitions>

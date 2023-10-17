@@ -16,7 +16,7 @@ namespace benoit_mathiez_penduv2
 
         public void ListDeMot()
         {
-            StreamReader stream = new StreamReader("C:\\Users\\SIO\\source\\repos\\benoit_mathiez_penduv2\\benoit_mathiez_penduv2\\mots.txt");
+            StreamReader stream = new StreamReader("C:\\Users\\cptbe\\Source\\Repos\\benoit_mathiez_penduv2\\benoit_mathiez_penduv2\\mots.txt");
             string line;
             while ((line = stream.ReadLine()) != null)
             {
