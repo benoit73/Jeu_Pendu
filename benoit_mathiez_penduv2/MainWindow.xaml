@@ -17,7 +17,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="ImgBG" Source="village.png"/>
+        <Image x:Name="ImgBG" Grid.Row="0" Grid.RowSpan="99" Grid.Column="0" Grid.ColumnSpan="99" Stretch="Fill"/>
 
         <TextBlock x:Name="TbMessage" Grid.Column="1" Grid.Row="1"/>
         <Image x:Name="monImage" Grid.Column="1" Grid.Row="0"/>
@@ -54,32 +54,32 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="BtnA" Content="A" Grid.Column="0" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnB" Content="B" Grid.Column="1" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnC" Content="C" Grid.Column="2" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnD" Content="D" Grid.Column="3" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnE" Content="E" Grid.Column="4" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnF" Content="F" Grid.Column="5" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnG" Content="G" Grid.Column="6" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnH" Content="H" Grid.Column="7" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnI" Content="I" Grid.Column="8" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnJ" Content="J" Grid.Column="9" Grid.Row="0" Click="Button_Click"/>
-            <Button x:Name="BtnK" Content="K" Grid.Column="0" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnL" Content="L" Grid.Column="1" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnM" Content="M" Grid.Column="2" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnN" Content="N" Grid.Column="3" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnO" Content="O" Grid.Column="4" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnP" Content="P" Grid.Column="5" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnQ" Content="Q" Grid.Column="6" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnR" Content="R" Grid.Column="7" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnS" Content="S" Grid.Column="8" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnT" Content="T" Grid.Column="9" Grid.Row="1" Click="Button_Click"/>
-            <Button x:Name="BtnU" Content="U" Grid.Column="2" Grid.Row="2" Click="Button_Click"/>
-            <Button x:Name="BtnV" Content="V" Grid.Column="3" Grid.Row="2" Click="Button_Click"/>
-            <Button x:Name="BtnW" Content="W" Grid.Column="4" Grid.Row="2" Click="Button_Click"/>
-            <Button x:Name="BtnX" Content="X" Grid.Column="5" Grid.Row="2" Click="Button_Click"/>
-            <Button x:Name="BtnY" Content="Y" Grid.Column="6" Grid.Row="2" Click="Button_Click"/>
-            <Button x:Name="BtnZ" Content="Z" Grid.Column="7" Grid.Row="2" Click="Button_Click"/>
+            <Button x:Name="BtnA" Content="A" Grid.Column="0" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnB" Content="B" Grid.Column="1" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnC" Content="C" Grid.Column="2" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnD" Content="D" Grid.Column="3" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnE" Content="E" Grid.Column="4" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnF" Content="F" Grid.Column="5" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnG" Content="G" Grid.Column="6" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnH" Content="H" Grid.Column="7" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnI" Content="I" Grid.Column="8" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnJ" Content="J" Grid.Column="9" Grid.Row="0" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnK" Content="K" Grid.Column="0" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnL" Content="L" Grid.Column="1" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnM" Content="M" Grid.Column="2" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnN" Content="N" Grid.Column="3" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnO" Content="O" Grid.Column="4" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnP" Content="P" Grid.Column="5" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnQ" Content="Q" Grid.Column="6" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnR" Content="R" Grid.Column="7" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnS" Content="S" Grid.Column="8" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnT" Content="T" Grid.Column="9" Grid.Row="1" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnU" Content="U" Grid.Column="2" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnV" Content="V" Grid.Column="3" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnW" Content="W" Grid.Column="4" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnX" Content="X" Grid.Column="5" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnY" Content="Y" Grid.Column="6" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
+            <Button x:Name="BtnZ" Content="Z" Grid.Column="7" Grid.Row="2" Click="Button_Click" Style="{StaticResource DefaultButton}"/>
 
         </Grid>
 

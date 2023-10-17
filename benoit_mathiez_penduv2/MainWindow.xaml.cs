@@ -28,6 +28,9 @@ namespace benoit_mathiez_penduv2
             myLaClass = new LaClass();
             myLaClass.ListDeMot();
             Initialiser();
+            string imagePath2 = "C:\\Users\\SIO\\Desktop\\benoit_mathiez_penduv2\\benoit_mathiez_penduv2\\Pendu\\village.jpg";
+            BitmapImage bitmapImage2 = new BitmapImage(new Uri(imagePath2));
+            ImgBG.Source = bitmapImage2;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
