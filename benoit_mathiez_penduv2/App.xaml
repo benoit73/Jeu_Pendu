@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:benoit_mathiez_penduv2"
              StartupUri="MainWindow.xaml">
-    
+
     <Application.Resources>
+        <ImageBrush x:Key="ButtonBackground" ImageSource="Pendu\bois.jpg" />
+        <ImageBrush x:Key="ButtonMainBG" ImageSource="Pendu\boisFonce.jpg" />
+
         <Style x:Key="DefaultButton" TargetType="Button">
-            <Setter Property="Border.CornerRadius" Value="50" />
+            <Setter Property="Background" Value="{StaticResource ButtonBackground}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
+
+        <Style x:Key="CentralButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ButtonMainBG}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
     </Application.Resources>
+
 </Application>

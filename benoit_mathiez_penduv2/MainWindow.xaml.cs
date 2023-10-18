@@ -29,10 +29,9 @@ namespace benoit_mathiez_penduv2
             myLaClass = new LaClass();
             myLaClass.ListDeMot();
             Initialiser();
-            //musique.Play();
-            MeEffect.Play();
-
+            musique.Play();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -53,8 +52,9 @@ namespace benoit_mathiez_penduv2
                     button.Background = Brushes.Red;
                     int numImage = myLaClass.NbMort;
                     string imagePath = $"Pendu\\{numImage}.png";
-                    //BitmapImage bitmapImage = new BitmapImage(new Uri(imagePath));
-                    //monImage.Source = bitmapImage;
+                    Uri resource = new Uri(imagePath, UriKind.Relative);
+                    BitmapImage bitmapImage = new BitmapImage(resource);
+                    monImage.Source = bitmapImage;
                 }
                 TbMot.Text = myLaClass.MotCache;
 
@@ -71,6 +71,11 @@ namespace benoit_mathiez_penduv2
             }
 
         }
+
+
+
+
+
 
         private void BtnReset_Click(object sender, RoutedEventArgs e)
         {
@@ -89,7 +94,7 @@ namespace benoit_mathiez_penduv2
             {
                 string nomBtn = "Btn" + s;
                 Button lebouton = FindName(nomBtn) as Button;
-                lebouton.Background = Brushes.Gray;
+                lebouton.ClearValue(Button.BackgroundProperty);
             }
         }
 
@@ -112,5 +117,14 @@ namespace benoit_mathiez_penduv2
                 isMusiquePlaying = true;
             }
         }
+
+        private void BtnJoker_Click(object sender, RoutedEventArgs e)
+        {
+            myLaClass.ChooseLettreJoker();
+            string nomBtn = "Btn" + myLaClass.LettreJoker.ToString();
+            Button btn = FindName(nomBtn) as Button;
+            btn.Click += Button_Click;
+        }  
+
     }
 }

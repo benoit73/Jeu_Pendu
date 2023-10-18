@@ -87,6 +87,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="Pendu\boisFonce.avif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,14 +99,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mots.txt" />
+    <Content Include="mots.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="village.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pendu\1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pendu\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -128,7 +133,15 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pendu\minecraft.mp3" />
+    <Resource Include="Pendu\bois.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pendu\boisFonce.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Pendu\minecraft.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Pendu\enceinte.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
