@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:benoit_mathiez_penduv2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" ResizeMode="NoResize">
+        Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -24,7 +24,7 @@
 
         <Image x:Name="ImgBG" Grid.Row="0" Grid.RowSpan="99" Grid.Column="0" Grid.ColumnSpan="99" Stretch="Fill" Source="Pendu\village.jpg" />
 
-        <TextBlock x:Name="TbMessage" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock x:Name="TbMessage" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="45" FontWeight="Bold"/>
 
         <Grid Grid.Row="0" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -32,14 +32,13 @@
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.5*"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button x:Name="Sound" Grid.Column="2" Click="Sound_Click" >
-                <Image Source="Pendu\enceinte.jpg" Stretch="Fill"/>
+                <Image x:Name="ImgSon" Source="Pendu\enceinte2.png" Stretch="Fill"/>
             </Button>
-            <Image x:Name="monImage"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+            <Image x:Name="monImage"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
 
         <Grid Grid.Column="0" Grid.Row="0">
@@ -54,11 +53,11 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>    
             
-            <TextBlock x:Name="TbMot"  Text="zaza" FontSize="130" TextAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
-            <Button x:Name="BtnReset" Grid.Row="1" Click="BtnReset_Click" Grid.Column="1" Content="Recommencer" Style="{StaticResource CentralButton}" FontSize="50"/>
+            <TextBlock x:Name="TbMot"  Text="zaza" FontSize="90" TextAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
+            <Button x:Name="BtnReset" Grid.Row="1" Click="BtnReset_Click" Grid.Column="1" Content="Recommencer" Style="{StaticResource CentralButton}" FontSize="35"/>
 
             <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom">
-                <Button x:Name="BtnJoker" Content="Découvrir une lettre !" Height="30px" Click="BtnJoker_Click" Width="250" FontSize="20" />
+                <Button x:Name="BtnJoker" Content="Découvrir une lettre !" Height="30px" Click="BtnJoker_Click" Width="250" FontSize="20" Style="{StaticResource ResetButton}"/>
                 <Label Content="Restant : 3" x:Name="LbJoker" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
             </StackPanel>
             

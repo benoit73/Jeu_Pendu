@@ -66,6 +66,7 @@ namespace benoit_mathiez_penduv2
                 if (myLaClass.NbMort == 7)
                 {
                     TbMessage.Text = "Tu as perdu !!";
+                    MeEffect.Stop();
                     MeEffect.Play();
                 }
             }
@@ -110,21 +111,31 @@ namespace benoit_mathiez_penduv2
             {
                 musique.Stop();
                 isMusiquePlaying = false;
+                Uri uri = new Uri("pack://application:,,,/Pendu/enceinte.jpg", UriKind.RelativeOrAbsolute);
+                ImgSon.Source = new BitmapImage(uri);
             }
             else
             {
                 musique.Play();
                 isMusiquePlaying = true;
+                Uri uri = new Uri("pack://application:,,,/Pendu/enceinte2.png", UriKind.RelativeOrAbsolute);
+                ImgSon.Source = new BitmapImage(uri);
             }
         }
 
         private void BtnJoker_Click(object sender, RoutedEventArgs e)
         {
-            myLaClass.ChooseLettreJoker();
-            string nomBtn = "Btn" + myLaClass.LettreJoker.ToString();
-            Button btn = FindName(nomBtn) as Button;
-            btn.Click += Button_Click;
-        }  
+            if (myLaClass.NbJokers != 0 && myLaClass.NbMort < 7 && myLaClass.Gagne != true)
+            {
+                myLaClass.ChooseLettreJoker();
+                string nomBtn = "Btn" + myLaClass.LettreJoker.ToString();
+                Button btn = FindName(nomBtn) as Button;
+                btn.Click += Button_Click;
+            }
+            
+            
+        }
+
 
     }
 }

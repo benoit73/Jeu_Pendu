@@ -139,6 +139,9 @@
     <Resource Include="Pendu\boisFonce.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Pendu\enceinte2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Pendu\minecraft.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
