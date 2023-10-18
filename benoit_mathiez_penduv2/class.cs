@@ -5,18 +5,18 @@ using System.Linq;
 
 namespace benoit_mathiez_penduv2
 {
-   
     public class LaClass
     {
-        List<string> list = new List<string>();
-        public string Mot { get; set; }
-        public string MotCache { get; set; }
-        public bool Gagne { get; set; }
-        public int NbMort { get; set; }
-        public bool BonneLettre { get; set; }
-        public int NbJokers { get; set; }
-        public char LettreJoker { get; set; }
+        List<string> list = new List<string>();  // Liste pour stocker les mots
+        public string Mot { get; set; }  // Mot actuel en jeu
+        public string MotCache { get; set; }  // Mot masqué affiché à l'utilisateur
+        public bool Gagne { get; set; }  // Indique si le joueur a gagné
+        public int NbMort { get; set; }  // Nombre de tentatives infructueuses
+        public bool BonneLettre { get; set; }  // Indique si la lettre proposée est correcte
+        public int NbJokers { get; set; }  // Nombre de jokers disponibles
+        public char LettreJoker { get; set; }  // Lettre obtenue en utilisant un joker
 
+        // Charge la liste de mots depuis un fichier texte
         public void ListDeMot()
         {
             StreamReader stream = new StreamReader("mots.txt");
@@ -27,11 +27,12 @@ namespace benoit_mathiez_penduv2
             }
         }
 
+        // Sélectionne un mot aléatoire depuis la liste et initialise le jeu
         public void SelectMot()
         {
             int listLength = list.Count;
             Random random = new Random();
-            int nombreAleatoire = random.Next(0, listLength); 
+            int nombreAleatoire = random.Next(0, listLength);
 
             Mot = list[nombreAleatoire];
             list.RemoveAt(nombreAleatoire);
@@ -42,6 +43,7 @@ namespace benoit_mathiez_penduv2
             NbMort = 0;
         }
 
+        // Teste si une lettre proposée est correcte
         public void TesterLettre(char lettre)
         {
             BonneLettre = false;
@@ -64,11 +66,11 @@ namespace benoit_mathiez_penduv2
 
             if (BonneLettre == false)
             {
-                NbMort++;              
+                NbMort++;
             }
         }
 
-        
+        // Choix d'une lettre en utilisant un joker
         public void ChooseLettreJoker()
         {
             char[] bonMot = Mot.ToCharArray();
@@ -77,7 +79,7 @@ namespace benoit_mathiez_penduv2
             List<char> bonnesLettres;
             bonnesLettres = new List<char>();
 
-            for (int x=0; x<longueur; x++)
+            for (int x = 0; x < longueur; x++)
             {
                 if (bonMot[x] != motCache[x])
                 {
@@ -92,15 +94,5 @@ namespace benoit_mathiez_penduv2
             char lettre = bonnesLettres[indexRandom];
             LettreJoker = lettre;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
