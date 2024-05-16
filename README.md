@@ -1,1 +1,1 @@
-Jeu du pendu avec des petits effets !
+Jeu du pendu avec des petits effets (images, musiques..)
